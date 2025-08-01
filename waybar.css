@@ -1,0 +1,40 @@
+@define-color bar        #1D2121;
+/*//@define-color letter     #efdbb1;*/
+@define-color letter     #F8D1AA;
+@define-color cypher     #D1F85D;
+@define-color mint       #B2E878;
+@define-color pale       #D1F8F8;
+@define-color dim        #AAD1D1;
+@define-color red        #F8015D;
+@define-color green      #5DF85D;
+@define-color pink       #F85D84;
+@define-color pign       #F8AAF8;
+@define-color change     #7AA2F8;
+@define-color yellow     #F8D15D;
+@define-color orange     #F85D01;
+@define-color teal       #83F8F8;
+@define-color lilac      #AAAAF8;
+
+
+* {
+  color: @letter;
+  background-color: @bar;
+}
+
+#taskbar button.visible,
+#workspaces button.visible {
+  border-bottom: 1px solid @letter;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  border-bottom: 1px solid @cypher;
+}
+
+#taskbar button.urgent,
+#workspaces button.urgent {
+  border-bottom: 2px solid @red;
+}
+tooltip {
+  border-bottom: 1px solid @letter;
+}
