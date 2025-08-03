@@ -36,7 +36,7 @@ background = '#F8D1AA'
 normal = { family = "GoMono Nerd Font Mono", style = "Regular" }
 bold = { family = "GoMono Nerd Font Mono", style = "Bold" }
 italic = { family = "GoMono Nerd Font Mono", style = "Italic" }
-size = 9
+size = 10.5
 offset.y = 3
 
 #normal = { family = "AnonymicePro Nerd Font Mono", style = "Regular" }
