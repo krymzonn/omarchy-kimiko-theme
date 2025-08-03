@@ -1,0 +1,9 @@
+@define-color selected-text  #5DF85D;
+@define-color text  #AAD1D1;
+@define-color base  #080808;
+@define-color border  #F8015D;
+
+/* these seem not to be in use yet */
+@define-color background #1D2121;
+@define-color foreground #F8D1AA;
+
