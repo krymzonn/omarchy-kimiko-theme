@@ -9,15 +9,11 @@ theme[main_fg]="#F8D1AA"
 
 # Title color for boxes
 theme[title]="#AAAAF8"
-#theme[title]="#D1F85D"
 
 # Highlight color for keyboard shortcuts
 theme[hi_fg]="#D1F8F8"
-#theme[hi_fg]="#83F8F8"
 
 # Background color of selected item in processes box
-#theme[selected_bg]="#393939"
-#theme[selected_bg]="#AA83F8"
 theme[selected_bg]="#D1F85D"
 
 # Foreground color of selected item in processes box
@@ -53,7 +49,6 @@ theme[temp_mid]="#e0af68"
 theme[temp_end]="#f7768e"
 
 # CPU graph colors
-#theme[cpu_start]="#F8D15D"
 theme[cpu_start]="#D1F85D"
 theme[cpu_mid]="#F85D01"
 theme[cpu_end]="#F8015D"
@@ -72,9 +67,6 @@ theme[cached_end]="#F85D84"
 theme[available_start]="#F8D15D"
 theme[available_mid]="#F8AA01"
 theme[available_end]="#5DF85D"
-#theme[available_start]="#F8D15D"
-#theme[available_mid]="#F85D01"
-#theme[available_end]="#F8015D"
 
 # Mem/Disk used meter
 theme[used_start]="#F8D15D"

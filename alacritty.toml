@@ -1,12 +1,11 @@
 [colors]
 [colors.primary]
-background = '#1d2121'
-#foreground = '#efdbb1'
+background = '#1D2121'
 foreground = '#F8D1AA'
 
 # Normal colors
 [colors.normal]
-black = '#0D1111'
+black = '#000000'
 red = '#F8015D'
 green = '#D1F85D'
 yellow = '#F8D15D'
@@ -17,7 +16,7 @@ white = '#D1F8F8'
 
 # Bright colors
 [colors.bright]
-black = '#000000'
+black = '#0D1111'
 red = '#F85D84'
 green = '#5DF85D'
 yellow = '#F85D01'
@@ -27,10 +26,7 @@ cyan = '#0db9d7'
 white = '#ffffff'
 
 [colors.selection]
-#background = '#336611'
-#background = '#efdbb1'
 background = '#F8D1AA'
-#background = '#D1F85D'
 
 [font]
 normal = { family = "GoMono Nerd Font Mono", style = "Regular" }
@@ -38,14 +34,4 @@ bold = { family = "GoMono Nerd Font Mono", style = "Bold" }
 italic = { family = "GoMono Nerd Font Mono", style = "Italic" }
 size = 10.5
 offset.y = 3
-
-#normal = { family = "AnonymicePro Nerd Font Mono", style = "Regular" }
-#bold = { family = "AnonymicePro Nerd Font Mono", style = "Bold" }
-#italic = { family = "AnonymicePro Nerd Font Mono", style = "Italic" }
-#normal = { family = "Iosevka Term Slab", style = "Regular" }
-#bold = { family = "Iosevka Term Slab", style = "Extrabold" }
-#italic = { family = "Iosevka Term Slab", style = "Italic" }
-#normal = { family = "Iosevka Term Slab", style = "Semibold" }
-#bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
-#italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
 
