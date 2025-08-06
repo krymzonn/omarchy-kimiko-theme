@@ -5,6 +5,9 @@ when expression demands. A theme for Omarchy based on my 2011 vim colorscheme
   alt="Screenshot with neovim and btop running; Strings are violet, not green."
   src="https://github.com/user-attachments/assets/880ce694-3b9c-4939-a67a-98705f2f9a6b" />
 
+![omarchy-kimiko-2025-08-04brecomp](https://github.com/user-attachments/assets/c4b52119-4567-42e6-8cdf-5f7cf676e059)
+
+
 ## Status
 
 This is initial work in progress, though most things should work by now.  
