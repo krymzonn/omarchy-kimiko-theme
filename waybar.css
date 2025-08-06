@@ -14,20 +14,17 @@
 @define-color teal       #83F8F8;
 @define-color lilac      #AAAAF8;
 
-
-* {
-  color: @letter;
-  background-color: @bar;
-}
+@define-color foreground @letter;
+@define-color background @bar;
 
 #taskbar button.visible,
 #workspaces button.visible {
-  border-bottom: 1px solid @letter;
+  border-bottom: 2px solid @letter;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-  border-bottom: 1px solid @cypher;
+  border-bottom: 2px solid @cypher;
 }
 
 #taskbar button.urgent,

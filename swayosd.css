@@ -1,14 +1,13 @@
-/*
-@define-color background-color #080808;
-@define-color border-color #D1F85D;
-@define-color label #AAD1D1;
-@define-color image #5DF85D;
-@define-color progress #F8015D;
-*/
-
 @define-color background-color #2D2120;
 @define-color border-color #D1F85D;
 @define-color label #F8D1AA;
 @define-color image  #F8D1AA;
 @define-color progress #F8D1AA;
 
+/* neon variant
+@define-color background-color #080808;
+@define-color border-color #D1F85D;
+@define-color label #AAD1D1;
+@define-color image #5DF85D;
+@define-color progress #F8015D;
+*/
