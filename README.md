@@ -3,7 +3,7 @@ when expression demands. A theme for Omarchy based on my 2011 vim colorscheme
 
 <img width="1920" height="1080"
   alt="Screenshot with neovim and btop running; Strings are violet, not green."
-  src="https://github.com/user-attachments/assets/880ce694-3b9c-4939-a67a-98705f2f9a6b" />
+  src="extra-assets/omarchy-kimiko-2025-08-04brecomp8.jpg" />
 
 ## Status
 
