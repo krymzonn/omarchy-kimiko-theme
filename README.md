@@ -7,6 +7,9 @@ when expression demands. A theme for Omarchy based on my 2011 vim colorscheme
 
 ![omarchy-kimiko-2025-08-04brecomp](https://github.com/user-attachments/assets/c4b52119-4567-42e6-8cdf-5f7cf676e059)
 
+![omarchy-kimiko-2025-08-04b50r5](https://github.com/user-attachments/assets/7a0b371c-f758-4685-819d-193245a2bf81)
+
+
 
 ## Status
 
