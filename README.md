@@ -1,5 +1,5 @@
 An elegant ancient newspaper bursts into a night of neon greens and purples,
-when expression demands. A theme for Omarchy based on my 2011 vim colorscheme
+when expression demands. A theme for [Omarchy](https://omarchy.org) based on my 2011 vim colorscheme
 
 <img width="1920" height="1080"
   alt="Screenshot with neovim and btop running; Strings are violet, not green."
@@ -7,11 +7,8 @@ when expression demands. A theme for Omarchy based on my 2011 vim colorscheme
 
 ## Status
 
-This is initial work in progress, though most things should work by now.  
-The nvim theme is a somewhat hacky quick adaptation of the ancient colorscheme.
-
-I'll likely need to adjust what can be in the theme vs what is
-considered orthogonal config (gap size?)
+Most things should work by now.  
+The nvim theme currently is an almost direct adaptation of the ancient colorscheme.
 
 ## Installation
 
@@ -30,4 +27,3 @@ yay -S ttf-go-nerd
 
 
 Let me know what you think, suggestions very welcome :)
-
