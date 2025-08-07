@@ -16,14 +16,16 @@ The nvim theme currently is an almost direct adaptation of the ancient colorsche
 omarchy-theme-install https://github.com/krymzonn/omarchy-kimiko-theme
 ```
 
+The theme works with the standard Omarchy fonts, though it is
+designed with Go Mono [1] in mind. Go Mono is available in Arch Extra [2]
 
-You may want to also install [1] the Go Mono font [2],
 ```
 yay -S ttf-go-nerd
 ```
 
-[1] https://archlinux.org/packages/extra/any/ttf-go-nerd/  
-[2] https://go.dev/blog/go-fonts
+[1] https://go.dev/blog/go-fonts
+[2] https://archlinux.org/packages/extra/any/ttf-go-nerd/  
 
 
 Let me know what you think, suggestions very welcome :)
+

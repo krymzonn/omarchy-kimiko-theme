@@ -28,10 +28,10 @@ white = '#ffffff'
 [colors.selection]
 background = '#F8D1AA'
 
-[font]
-normal = { family = "GoMono Nerd Font Mono", style = "Regular" }
-bold = { family = "GoMono Nerd Font Mono", style = "Bold" }
-italic = { family = "GoMono Nerd Font Mono", style = "Italic" }
-size = 10.5
-offset.y = 3
+#[font]
+#normal = { family = "GoMono Nerd Font Mono", style = "Regular" }
+#bold = { family = "GoMono Nerd Font Mono", style = "Bold" }
+#italic = { family = "GoMono Nerd Font Mono", style = "Italic" }
+#size = 10.5
+#offset.y = 3
 
