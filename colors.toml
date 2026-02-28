@@ -1,10 +1,9 @@
-#accent = "#b2e878"
 accent = "#d1f85d"
 cursor = "#d1f85d"
 foreground = "#f8d1aa"
 background = "#1d2121"
 selection_foreground = "#0d0f0f"
-selection_background = "#fedece"
+selection_background = "#f8d1aa"
 
 color0 = "#0d0f0f"
 color1 = "#f8015d"
