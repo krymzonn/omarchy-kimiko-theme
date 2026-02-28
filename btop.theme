@@ -2,10 +2,11 @@
 # By: Krymzon
 
 # Main bg
-theme[main_bg]="#1d2121"
+#theme[main_bg]="#1d2121"
+theme[main_bg]=
 
 # Main text color
-theme[main_fg]="#F8D1AA"
+theme[main_fg]="#bad094"
 
 # Title color for boxes
 theme[title]="#AAAAF8"
@@ -14,16 +15,20 @@ theme[title]="#AAAAF8"
 theme[hi_fg]="#D1F8F8"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#D1F85D"
+#theme[selected_bg]="#D1F85D"
+theme[selected_bg]="#AA83F8"
 
 # Foreground color of selected item in processes box
-#theme[selected_fg]="#5DF85D"
 theme[selected_fg]="#000000"
 
 # Color of inactive/disabled text
-theme[inactive_fg]="#393939"
-#theme[inactive_fg]="#9A9A9A"
-#theme[inactive_fg]="#AAD1D1"
+theme[inactive_fg]="#4e4e52"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#c7b7ca"
+
+# Background color of the percentage meters
+theme[meter_bg]="#4e4e52"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
 theme[proc_misc]="#AAAAF8"
@@ -83,3 +88,7 @@ theme[upload_start]="#F8D15D"
 theme[upload_mid]="#F8AA01"
 theme[upload_end]="#5DF85D"
 
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#aad1d1"
+theme[process_mid]="#5f87af"
+theme[process_end]="#aa83f8"
