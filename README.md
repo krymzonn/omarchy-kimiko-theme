@@ -8,15 +8,27 @@ A theme for [Omarchy](https://omarchy.org) based on my 2011 vim colorscheme
   alt="Screenshot with neovim and btop running; Strings are violet, not green."
   src="preview.png" />
 
+
 ## What
 
-* custom nvim colorscheme
-* 16 terminal colours are pretty close to their expected names
-* 3 backgrounds, main 6k
+Now updated for Omarchy 3.4: colors.toml based, with overrides
 
-This is meant to be practical. While Beauty is still stuck in the eye of that
-beholder, and I'm far from an artist, I found this colorscheme to work
-well, at least for my brain.
+* custom nvim colorscheme
+  * strings that are violet, not green
+  * 36 distinct colours and shades, mostly of medium contrast
+  * optimised and tested for practicality
+  * honed through 15 years of primary use
+    * though highly opinionated
+* waybar colours - calmly informative
+* mako colours - for calm, unitrusive notifications
+* walker colours - saturated immediacy
+* btop theme - meaningful colours, without being too distracting
+* hyprlock theme - black with neon lines
+  * looks particularly good on OLED
+* 16 terminal colours not far off their canon names
+  * improving compatibility with a wide range of TUIs
+* original backgrounds
+  * primary at 6K resolution
 
 ## Installation
 
@@ -24,28 +36,35 @@ well, at least for my brain.
 omarchy-theme-install https://github.com/krymzonn/omarchy-kimiko-theme
 ```
 
-## Original Self-(re)port
+## Origin
 
 As of March 2026, this has been single-author work, including the wallpapers.
-I took and edited the photos, I wrote the vim theme starting in 2011.
+I took and edited the photos, I wrote the vim theme over 15 years.
 It was for my selfish practical and aesthetic desires - while the repo
-was public, I didn't really expect anyone else to use it.
+has long been public, I didn't really expect anyone else to use it.
 
 As Omarchy was launching, it was time for me to return to contributing
-to the wonderful Gift Exchange. And I found that I still had a preference
-for my vim theme. So, here's the omarchy + nvim edition for you
+to the wonderful Gift Exchange. And I found that despite many great
+themes emerging, I still needed my old vim colours.
+
+So, I've made this omarchy + nvim edition to share,
+hopefully some of you may find it useful.
+
+I do welcome comments, help, and contributions
 
 ## Optional font
 
 The current theme files do not rely on it at all,
-but the theme looks best with the official Go Lang font,
-Go Mono [1]
+though the theme looks well with the official Go Lang font,
+Go Mono [1] - for that old typeface, almost Baskerville-like
+look.
 
-To install [2] the Nerd variant from Arch Extra:
+To install the Nerd variant from Arch Extra[2]:
 
 ```
 yay -S ttf-go-nerd
 ```
 
-[2] <https://go.dev/blog/go-fonts>
-[1] <https://archlinux.org/packages/extra/any/ttf-go-nerd/>  
+[1] <https://go.dev/blog/go-fonts>  
+[2] <https://archlinux.org/packages/extra/any/ttf-go-nerd/>  
+
