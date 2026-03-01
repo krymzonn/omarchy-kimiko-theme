@@ -30,11 +30,13 @@ Now updated for Omarchy 3.4: colors.toml based, with overrides
 * original backgrounds
   * primary at 6K resolution
 
+
 ## Installation
 
 ```
 omarchy-theme-install https://github.com/krymzonn/omarchy-kimiko-theme
 ```
+
 
 ## Origin
 
@@ -43,14 +45,15 @@ I took and edited the photos, I wrote the vim theme over 15 years.
 It was for my selfish practical and aesthetic desires - while the repo
 has long been public, I didn't really expect anyone else to use it.
 
-As Omarchy was launching, it was time for me to return to contributing
+As Omarchy was launching, the time came for me to return to contributing
 to the wonderful Gift Exchange. And I found that despite many great
 themes emerging, I still needed my old vim colours.
 
 So, I've made this omarchy + nvim edition to share,
 hopefully some of you may find it useful.
 
-I do welcome comments, help, and contributions
+Comments, help, and contributions are very welcome
+
 
 ## Optional font
 
