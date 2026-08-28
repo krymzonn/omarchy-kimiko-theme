@@ -1,0 +1,13 @@
+# Walker: dim text, boom-red card, selected row = good on b00.
+background                = "#000000"   # b00
+background-alpha          = 1.0
+text                      = "#aad1d1"   # fgc
+border                    = "#f8015d"   # boom
+border-alpha              = 1.0
+scrim                     = "#000000"   # b00
+scrim-alpha               = 0.5
+selected-background       = "#5df85d"   # good
+selected-background-alpha = 1.0
+selected-text             = "#000000"   # b00
+selected-border           = "#5df85d"   # good
+selected-border-alpha     = 1.0

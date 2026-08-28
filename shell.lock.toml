@@ -1,0 +1,12 @@
+# Hyprlock: black field, cypher text, good neon ring, boom on error.
+background       = "#000000"   # b00
+background-alpha = 1.0
+text             = "#d1f85d"   # active / cypher
+placeholder      = "#506262"   # fgc at ~47% on b00 (old hyprlock aad1d177)
+text-error       = "#f8015d"   # boom
+border           = "#5df85d"   # good
+border-active    = "#5df85d"   # good
+border-error     = "#f8015d"   # boom
+border-alpha     = 1.0
+selection        = "#d1f85d"   # active / cypher
+selection-alpha  = 0.45
