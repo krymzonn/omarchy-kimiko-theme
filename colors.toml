@@ -1,23 +1,37 @@
-accent = "#d1f85d"
-cursor = "#d1f85d"
-foreground = "#f8d1aa"
-background = "#1d2121"
-selection_foreground = "#0d0f0f"
-selection_background = "#f8d1aa"
+mode = "dark"
 
-color0 = "#0d0f0f"
-color1 = "#f8015d"
-color2 = "#5df85d"
-color3 = "#bad094"
-color4 = "#5f87af"
-color5 = "#aa83f8"
-color6 = "#aad1d1"
-color7 = "#f8d1aa"
-color8 = "#4e4e52"
-color9 = "#f85d84"
-color10 = "#b2e878"
-color11 = "#eaf4a0"
-color12 = "#8bb2d3"
-color13 = "#aaaaf8"
-color14 = "#d1f8f8"
-color15 = "#fedece"
+# Desktop / TUI / aether palette. Nvim names in comments; syntax leftovers
+# (str, loop, fg2, h5, h6, bg1, search/diff washes) stay in kimiko.nvim.
+
+accent = "#d1f85d"                 # active / cypher
+selection = "#004f87"              # bg_vis; alt: bg_add #1b3f00
+muted = "#4e4e52"                  # line; bump candidates: h6 #aaaaab, h5 #c7b7ca, fgc #aad1d1
+
+background = "#1d2121"             # bg2
+dark_background = "#0d0f0f"        # bg0
+darker_background = "#000000"      # b00
+lighter_background = "#2d2929"     # bg3
+
+foreground = "#f8d1aa"             # fg_read (waybar letter)
+dark_foreground = "#4e4e52"        # line (same as muted; no nvim grey in the 0.12 band)
+light_foreground = "#bad094"       # fg1 (nvim Normal)
+bright_foreground = "#fedece"      # fg_see (cursor + color15); alt cursor: fg1bri #eaf4a0
+
+red = "#f8015d"                    # boom
+orange = "#fa9903"                 # warn
+yellow = "#f8d15d"                 # kw
+green = "#5df85d"                  # good
+cyan = "#aad1d1"                   # fgc
+blue = "#5f87af"                   # fg4
+magenta = "#aa83f8"                # nvim accent
+brown = "#4c1100"                  # bg_del
+
+bright_red = "#f85d84"             # op
+bright_yellow = "#eaf4a0"          # fg1bri
+bright_green = "#b2e878"           # fine
+bright_cyan = "#d1f8f8"            # fn
+bright_blue = "#8bb2d3"            # fg3
+bright_magenta = "#aaaaf8"         # num
+
+hyprland_active_border = "rgba(d1f85dee)"
+hyprland_inactive_border = "#2d2929"  # bg3
