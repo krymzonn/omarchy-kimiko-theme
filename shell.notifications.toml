@@ -1,7 +1,0 @@
-# Mako: peach on charcoal, no window-border lime.
-background       = "#1d2121"   # bg2
-background-alpha = 0.6
-text             = "#f8d1aa"   # fg_read
-border           = "#f8d1aa"   # fg_read
-border-alpha     = 1.0
-countdown        = "#d1f85d"   # active / cypher

@@ -1,0 +1,76 @@
+# Omarchy 4 shell surfaces we override. A theme-shipped shell.toml replaces
+# the generated file entirely, so [bar], [controls], [popups], [tooltip],
+# and [image-picker] fall back to Color.qml / Style defaults (still driven
+# by colors.toml). New upstream sections will not appear until added here.
+
+[spacing]
+# Card inset for menu, clipboard, emoji, reminders, polkit.
+# Style default is 18; 8 is a tighter band that still clears the title.
+panel-padding = 8
+
+[notifications]
+# Mako: peach on charcoal, no window-border lime.
+background       = "#1d2121"   # bg2
+background-alpha = 0.6
+text             = "#f8d1aa"   # fg_read
+border           = "#f8d1aa"   # fg_read
+border-alpha     = 1.0
+countdown        = "#d1f85d"   # active / cypher
+
+[menu]
+# Walker: dim text, boom-red card, selected row = good on b00.
+background                = "#000000"   # b00
+background-alpha          = 1.0
+text                      = "#aad1d1"   # fgc
+border                    = "#f8015d"   # boom
+border-alpha              = 1.0
+scrim                     = "#000000"   # b00
+scrim-alpha               = 0.5
+selected-background       = "#5df85d"   # good
+selected-background-alpha = 1.0
+selected-text             = "#000000"   # b00
+selected-border           = "#5df85d"   # good
+selected-border-alpha     = 1.0
+
+[launcher]
+# Same tokens as [menu]; card stays slightly translucent like the template.
+# Super+Space currently reads [menu] (Color.menu); this is ready if they split.
+background                = "#000000"   # b00
+background-alpha          = 0.95
+text                      = "#aad1d1"   # fgc
+border                    = "#f8015d"   # boom
+border-alpha              = 1.0
+scrim                     = "#000000"   # b00
+scrim-alpha               = 0.5
+selected-background       = "#5df85d"   # good
+selected-background-alpha = 1.0
+selected-text             = "#000000"   # b00
+selected-border           = "#5df85d"   # good
+selected-border-alpha     = 1.0
+
+[lock]
+# Hyprlock: black field, cypher text, good neon ring, boom on error.
+background       = "#000000"   # b00
+background-alpha = 1.0
+text             = "#d1f85d"   # active / cypher
+placeholder      = "#4e4e52"   # line (Enter Password / fingerprint hint); alt: bg_search #3d6900
+text-error       = "#f8015d"   # boom
+border           = "#5df85d"   # good
+border-active    = "#5df85d"   # good
+border-error     = "#f8015d"   # boom
+border-alpha     = 1.0
+selection        = "#d1f85d"   # active / cypher
+selection-alpha  = 0.45
+
+[polkit]
+# Auth dialog: same neon language as lock, peach body text on charcoal.
+background       = "#1d2121"   # bg2
+background-alpha = 1.0
+text             = "#f8d1aa"   # fg_read
+text-error       = "#f8015d"   # boom
+border           = "#5df85d"   # good
+border-error     = "#f8015d"   # boom
+border-alpha     = 1.0
+scrim            = "#000000"   # b00
+scrim-alpha      = 0.5
+accent           = "#d1f85d"   # active / cypher
