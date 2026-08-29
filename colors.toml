@@ -1,7 +1,7 @@
 mode = "dark"
 
 # Desktop / TUI / aether palette. Nvim names in comments; syntax leftovers
-# (str, loop, fg2, h5, h6, bg1, search/diff washes) stay in kimiko.nvim.
+# (str, fg2, h5, h6, search/diff washes) stay in kimiko.nvim.
 
 accent = "#d1f85d"                 # active / cypher
 selection = "#004f87"              # bg_vis; alt: bg_add #1b3f00

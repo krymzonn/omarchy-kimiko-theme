@@ -1,6 +1,6 @@
 # Omarchy 4 shell surfaces we override. A theme-shipped shell.toml replaces
-# the generated file entirely, so [bar], [controls], [popups], [tooltip],
-# and [image-picker] fall back to Color.qml / Style defaults (still driven
+# the generated file entirely, so [bar], [controls], [tooltip], and
+# [image-picker] fall back to Color.qml / Style defaults (still driven
 # by colors.toml). New upstream sections will not appear until added here.
 
 [spacing]
@@ -16,6 +16,16 @@ text             = "#f8d1aa"   # fg_read
 border           = "#f8d1aa"   # fg_read
 border-alpha     = 1.0
 countdown        = "#d1f85d"   # active / cypher
+
+[popups]
+# Volume OSD, bar flyouts (wifi etc), dropdowns. Less monopolising than
+# the launcher: loop frame instead of boom. Card fill is flyouts only
+# (OSD pill ignores this, hardcoded bg2 at 0.97).
+background       = "#1d1a1b"   # bg1 (warmer nvim charcoal, unused elsewhere)
+background-alpha = 0.9
+text             = "#aad1d1"   # fgc (OSD icon/percent only; flyout copy is bar peach)
+border           = "#83f8f8"   # loop
+border-alpha     = 1.0
 
 [menu]
 # Walker: dim text, boom-red card, selected row = good on b00.

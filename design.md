@@ -162,7 +162,6 @@ Desktop gets 16+shades; these stay in kimiko.nvim (and can be hardcoded in
 
 | hex | nvim | Why |
 |---|---|---|
-| `#1d1a1b` | `bg1` | fourth background; warmer twin of `bg2` |
 | `#fcc1d6` | `fg2` | rose heading |
 | `#c7b7ca` | `h5` | dusty lilac |
 | `#aaaaab` | `h6` | comments, unless promoted to `muted` |
@@ -175,7 +174,7 @@ Desktop gets 16+shades; these stay in kimiko.nvim (and can be hardcoded in
 ## Shell surfaces (`shell.toml`)
 
 A theme-shipped `shell.toml` **replaces** the generated file. Sections we do
-not list (`[bar]`, `[controls]`, `[popups]`, `[tooltip]`, `[image-picker]`)
+not list (`[bar]`, `[controls]`, `[tooltip]`, `[image-picker]`)
 fall back to Color.qml / Style defaults from `colors.toml`. New upstream
 sections will not appear until added here. Split `shell.<section>.toml`
 overlays would pick those up automatically; we chose one file for legibility.
@@ -187,6 +186,7 @@ icon, not a cypher underline.
 | Section | 3.x source | Intent |
 |---|---|---|
 | `[notifications]` | Mako | peach on `bg2` at **0.6** alpha; no lime window-chrome |
+| `[popups]` | — | bar flyouts: **`bg1` at 0.9**, **`loop` frame**. OSD pill fill is hardcoded `bg2` at 0.97; OSD text/track use `popups.text` (`fgc`); OSD progress fill is global `Color.accent` (cypher). Flyout *copy* is `bar.foreground` (peach), not `popups.text` |
 | `[menu]` | Walker | `b00` card, `fgc` text, boom frame, **good fill + b00 text** on the selected row |
 | `[launcher]` | same tokens | Super+Space today reads **`[menu]`** (`Color.menu`); `[launcher]` is ready if they split |
 | `[lock]` | Hyprlock | `b00` field, cypher text, good ring, boom on error; placeholder **`line`** (also the fingerprint glyph) |
