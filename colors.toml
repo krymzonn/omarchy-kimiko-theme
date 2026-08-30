@@ -1,10 +1,11 @@
 mode = "dark"
 
 # Desktop / TUI / aether palette. Nvim names in comments; syntax leftovers
-# (str, fg2, h5, h6, search/diff washes) stay in kimiko.nvim.
+# (str, h5, h6, search/diff washes) stay in kimiko.nvim.
 
 accent = "#d1f85d"                 # active / cypher
 selection = "#004f87"              # bg_vis; alt: bg_add #1b3f00
+selection_foreground = "#fcc1d6"   # fg2 (rose on Visual blue); alt: h5 #c7b7ca
 muted = "#4e4e52"                  # line; bump candidates: h6 #aaaaab, h5 #c7b7ca, fgc #aad1d1
 
 background = "#1d2121"             # bg2
@@ -15,7 +16,7 @@ lighter_background = "#2d2929"     # bg3
 foreground = "#f8d1aa"             # fg_read (waybar letter)
 dark_foreground = "#4e4e52"        # line (same as muted; no nvim grey in the 0.12 band)
 light_foreground = "#bad094"       # fg1 (nvim Normal)
-bright_foreground = "#fedece"      # fg_see (cursor + color15); alt cursor: fg1bri #eaf4a0
+bright_foreground = "#d1f85d"      # active / cypher (cursor + color15); color11 stays fg1bri
 
 red = "#f8015d"                    # boom
 orange = "#fa9903"                 # warn

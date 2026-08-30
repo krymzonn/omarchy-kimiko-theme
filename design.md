@@ -45,7 +45,7 @@ Resolver traps (cannot be overridden from the theme):
 |---|---|---|---|
 | `b00` | `#000000` | special cases only | DiffDelete fg; Telescope selected fg |
 | `bg0` | `#0d0f0f` | darkest base | WinBarNC, float shadow; 3.x `color0` |
-| `bg1` | `#1d1a1b` | warmer | CursorLine, Neo-tree, floats |
+| `bg1` | `#1d1a1b` | warmer | CursorLine, Neo-tree, floats; **`[popups]` flyout fill** |
 | `bg2` | `#1d2121` | standard | 3.x `background`, waybar `bar` |
 | `bg3` | `#2d2929` | interface bars | StatusLine, CursorColumn |
 
@@ -56,13 +56,13 @@ Resolver traps (cannot be overridden from the theme):
 | `fg0` | `#ffffff` | special cases only | unused in groups |
 | `fg1bri` | `#eaf4a0` | “locked in” base | Identifier; old vim Normal |
 | `fg1` | `#bad094` | norm editable, tint | **nvim Normal**; 3.x `color3`; btop `main_fg` |
-| `fg2` | `#fcc1d6` | htmlH2 | headings, characters |
+| `fg2` | `#fcc1d6` | htmlH2 | headings, characters; **`selection_foreground`** |
 | `fg3` | `#8bb2d3` | htmlH3, “change” | waybar `change`; 3.x `color12` |
 | `fg4` | `#5f87af` | NonText, htmlH4 | Type, PreProc; 3.x `color4` |
 | `h5` | `#c7b7ca` | htmlH5 | doc comments; btop `graph_text` |
 | `h6` | `#aaaaab` | htmlH6 | **Comments** |
 | `line` | `#4e4e52` | mid neutral | LineNr; 3.x `color8` |
-| `fg_see` | `#fedece` | emphasis read-only | StatusLine; 3.x `color15` |
+| `fg_see` | `#fedece` | emphasis read-only | StatusLine; 3.x `color15`; **dropped from 4.0 slots** (caret was too peach) |
 | `fg_read` | `#f8d1aa` | main read-only | 3.x `foreground`, waybar `letter` |
 
 ### Accents
@@ -73,7 +73,7 @@ Resolver traps (cannot be overridden from the theme):
 | `warn` | `#fa9903` | Conditional | waybar `orange`; missing from 3.x `colors.toml` |
 | `fine` | `#b2e878` | mint | 3.x `color10` |
 | `good` | `#5df85d` | green | 3.x `color2`; Walker selected-text |
-| `loop` | `#83f8f8` | do/for | waybar `teal`; not in 3.x `colors.toml` |
+| `loop` | `#83f8f8` | do/for | waybar `teal`; **`[popups]` border** |
 | `accent` | `#aa83f8` | nvim name | 3.x `color5`; btop boxes |
 | `num` | `#aaaaf8` | | 3.x `color13` |
 | `str` | `#f8aaf8` | | **String**; waybar `pign` |
@@ -105,6 +105,7 @@ honest hue names (`yellow` is gold `kw`, not olive `fg1`).
 |---|---|---|---|
 | `accent` | `active` | `#d1f85d` | cypher, not nvim accent |
 | `selection` | `bg_vis` | `#004f87` | Visual wash; **not** neon `good` (that leaks into vscode/aether/Obsidian) |
+| `selection_foreground` | `fg2` | `#fcc1d6` | rose on Visual blue; alt `h5`. Also gum selected rows, vscode selection fg |
 | `muted` | `line` | `#4e4e52` | stock comments/gutter weight (~2:1 on bg) |
 | `background` | `bg2` | `#1d2121` | |
 | `dark_background` | `bg0` | `#0d0f0f` | old terminal black, as a shade |
@@ -112,8 +113,8 @@ honest hue names (`yellow` is gold `kw`, not olive `fg1`).
 | `lighter_background` | `bg3` | `#2d2929` | |
 | `foreground` | `fg_read` | `#f8d1aa` | 3.x letter; nvim Normal is demoted to `light_foreground` |
 | `dark_foreground` | `line` | `#4e4e52` | same as muted; no nvim grey in the stock ~0.12 band |
-| `light_foreground` | `fg1` | `#bad094` | aether `@variable`; custom btop does not use the template |
-| `bright_foreground` | `fg_see` | `#fedece` | **cursor** and color15 |
+| `light_foreground` | `fg1` | `#bad094` | almost unused on this machine: aether `@variable` (install-path nvim only); custom `btop.theme` does not use the template |
+| `bright_foreground` | `active` | `#d1f85d` | **cursor**, color15, gum/helix/vscode carets; same paint as `accent`. Terminal “bright white”. `selection_foreground` does **not** follow this (set explicitly). |
 | `red` | `boom` | `#f8015d` | |
 | `orange` | `warn` | `#fa9903` | new vs 3.x `colors.toml` |
 | `yellow` | `kw` | `#f8d15d` | 3.x had olive here |
@@ -131,21 +132,19 @@ honest hue names (`yellow` is gold `kw`, not olive `fg1`).
 | `hyprland_active_border` | `active` | `rgba(d1f85dee)` | generated lua; cloned themes drop shipped `hyprland.lua` |
 | `hyprland_inactive_border` | `bg3` | `#2d2929` | very quiet vs `background`; bump to `line` if inactive windows vanish |
 
-`selection_foreground` is omitted (follows `bright_foreground`). Neon
-`good`+`b00` is **not** in `colors.toml`; it lives on `[menu]` / `[launcher]`.
+Same hex, two roles: Omarchy `accent` = `bright_foreground` = nvim `active` (cypher).
+Neon `good`+`b00` is **not** in `colors.toml`; it lives on `[menu]` / `[launcher]`.
 
 
 ## Open palette forks
 
-Still reasonable to try later; not blocking:
+Settled (happy with looks): `bright_foreground` = `active`, `selection`/`selection_foreground` = `bg_vis`/`fg2`, `yellow` = `kw`. Do not steal `loop` for `cyan` — it is the flyout frame.
+
+Still reasonable later; not blocking:
 
 | Slot | Shipped | Alternatives |
 |---|---|---|
 | `muted` | `line` | `h6` `#aaaaab` (legible comments; also lifts linenr and vscode guides), `h5`, `fgc` |
-| `bright_foreground` | `fg_see` | `fg1bri` as cursor |
-| `selection` | `bg_vis` | `bg_add` `#1b3f00` |
-| `yellow` | `kw` | keep 3.x olive `fg1` as yellow |
-| `cyan` | `fgc` | `loop` if cyan should look like cyan |
 | `brown` | `bg_del` | omit (auto mix of `warn` toward black, Y≈0.10, typical stock) |
 | `hyprland_inactive_border` | `bg3` | `line`, or `rgba(595959aa)` (3.x default) |
 
@@ -162,13 +161,12 @@ Desktop gets 16+shades; these stay in kimiko.nvim (and can be hardcoded in
 
 | hex | nvim | Why |
 |---|---|---|
-| `#fcc1d6` | `fg2` | rose heading |
-| `#c7b7ca` | `h5` | dusty lilac |
+| `#fedece` | `fg_see` | dropped from 4.0 (was color15 / caret; too like read-only) |
+| `#c7b7ca` | `h5` | dusty lilac; btop `graph_text` by hand |
 | `#aaaaab` | `h6` | comments, unless promoted to `muted` |
-| `#83f8f8` | `loop` | unless a cyan slot takes it |
 | `#f8aaf8` | `str` | **violet strings** — no Omarchy role named string; generated vscode/helix colour strings green |
 | `#ffffff` | `fg0` | unused special |
-| search/diff washes | `bg_match`, `deep_inc`, `bg_del`*, `bg_search`, `bg_add`*, `bg_chg` | editor only (`*` = used if chosen as `selection` / `brown`) |
+| search/diff washes | `bg_match`, `deep_inc`, `bg_search`, `bg_add`, `bg_chg` | editor only (`bg_vis` is `selection`; `bg_del` is `brown`) |
 
 
 ## Shell surfaces (`shell.toml`)
@@ -245,5 +243,5 @@ btop/chromium/icons kept, `neovim.lua` kept for the author symlink.
 5. **New `preview.png`** — current shot is still a 3.x Waybar desktop.
 6. **Install-path smoke test** — a real clone with `.git`, not the symlink.
 7. **Publish hygiene** — `old/` and `extra-assets/` are copied into the staged theme; decide whether 4.0 ships them.
-8. Optional palette forks in the table above.
+8. Optional remaining forks: `muted` → `h6`, `brown` auto-mix, inactive border `line`.
 9. **Do not fast-forward `master`** until ready to drop 3.x.

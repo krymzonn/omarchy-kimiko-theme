@@ -21,7 +21,7 @@ countdown        = "#d1f85d"   # active / cypher
 # Volume OSD, bar flyouts (wifi etc), dropdowns. Less monopolising than
 # the launcher: loop frame instead of boom. Card fill is flyouts only
 # (OSD pill ignores this, hardcoded bg2 at 0.97).
-background       = "#1d1a1b"   # bg1 (warmer nvim charcoal, unused elsewhere)
+background       = "#1d1a1b"   # bg1 (warmer nvim charcoal; not in colors.toml)
 background-alpha = 0.9
 text             = "#aad1d1"   # fgc (OSD icon/percent only; flyout copy is bar peach)
 border           = "#83f8f8"   # loop
