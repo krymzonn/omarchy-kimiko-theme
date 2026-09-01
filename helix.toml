@@ -1,0 +1,153 @@
+# First pass: nvim kimiko syntax on Helix (kept on `omarchy theme install`).
+# Palette keys are nvim names. ui.cursor uses cypher (active), not accent.
+
+# Syntax
+"comment" = { fg = "h6", modifiers = ["italic"] }
+"comment.documentation" = "h5"
+"keyword" = { fg = "kw", modifiers = ["bold"] }
+"keyword.control" = { fg = "warn", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "loop", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "boom", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "kw", modifiers = ["bold"] }
+"keyword.function" = { fg = "kw", modifiers = ["bold"] }
+"keyword.operator" = { fg = "op", modifiers = ["bold"] }
+"keyword.storage.modifier" = "h5"
+"function" = "fn"
+"function.builtin" = { fg = "fg_see", modifiers = ["italic"] }
+"function.macro" = "fn"
+"function.method" = "fgc"
+"type" = "fg4"
+"type.builtin" = { fg = "fg4", modifiers = ["italic"] }
+"constructor" = "fn"
+"constant" = "fg_read"
+"constant.builtin" = { fg = "fg_read", modifiers = ["italic"] }
+"constant.numeric" = "num"
+"constant.character" = "fg2"
+"constant.character.escape" = "boom"
+"string" = "str"
+"string.regexp" = "fg3"
+"string.special" = "fg3"
+"string.special.path" = "fg4"
+"variable" = "fg1bri"
+"variable.builtin" = { fg = "op", modifiers = ["italic"] }
+"variable.other.member" = "nvim_accent"
+"variable.parameter" = { fg = "fine", modifiers = ["italic"] }
+"label" = { fg = "boom", modifiers = ["bold"] }
+"punctuation" = "fn"
+"punctuation.bracket" = "kw"
+"punctuation.special" = "active"
+"operator" = { fg = "op", modifiers = ["bold"] }
+"tag" = "fine"
+"namespace" = "boom"
+"special" = "nvim_accent"
+"attribute" = "good"
+
+# Markup
+"markup.heading.1" = "op"
+"markup.heading.2" = "fg2"
+"markup.heading.3" = "fg3"
+"markup.heading.4" = "fg4"
+"markup.heading.5" = "h5"
+"markup.heading.6" = "h6"
+"markup.list" = "fn"
+"markup.list.unchecked" = "kw"
+"markup.list.checked" = { fg = "good", modifiers = ["bold"] }
+"markup.bold" = { fg = "fg_see", modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "fg4", modifiers = ["italic", "underlined"] }
+"markup.link.text" = "h5"
+"markup.link.label" = "fg3"
+"markup.raw" = "fg1"
+"markup.quote" = "nvim_accent"
+
+# Diff
+"diff.plus" = { bg = "bg_add" }
+"diff.minus" = { fg = "b00", bg = "bg_del" }
+"diff.delta" = { bg = "bg3" }
+
+"ui.background" = { }
+"ui.linenr" = { fg = "line" }
+"ui.linenr.selected" = { fg = "fg_read" }
+
+"ui.statusline" = { fg = "bg2", bg = "fg_read" }
+"ui.statusline.inactive" = { fg = "bg2", bg = "line" }
+"ui.statusline.normal" = { fg = "bg1", bg = "fg4", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg1", bg = "active", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg1", bg = "nvim_accent", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "fg_read", bg = "bg2" }
+"ui.window" = { fg = "line" }
+"ui.help" = { fg = "fg_read", bg = "bg2" }
+
+"ui.bufferline" = { fg = "line", bg = "bg2" }
+"ui.bufferline.active" = { fg = "fg_read", bg = "bg2", underline = { color = "active", style = "line" } }
+
+"ui.text" = "fg1"
+"ui.text.focus" = { fg = "fg_read", bg = "bg3", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "line" }
+"ui.text.directory" = "fg4"
+
+"ui.virtual" = "line"
+"ui.virtual.ruler" = { bg = "bg3" }
+"ui.virtual.indent-guide" = "line"
+"ui.virtual.inlay-hint" = { fg = "line" }
+"ui.virtual.jump-label" = { fg = "boom", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "line"
+
+"ui.selection" = { bg = "bg_vis", fg = "fg2" }
+"ui.cursor" = { fg = "bg2", bg = "active" }
+"ui.cursor.primary" = { fg = "bg2", bg = "active" }
+"ui.cursor.match" = { fg = "kw", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "bg2", bg = "active" }
+"ui.cursor.primary.insert" = { fg = "bg2", bg = "good" }
+"ui.cursor.primary.select" = { fg = "bg2", bg = "nvim_accent" }
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.highlight" = { bg = "bg3", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "fgc", bg = "b00" }
+"ui.menu.selected" = { fg = "b00", bg = "good", modifiers = ["bold"] }
+
+"diagnostic.error" = { underline = { color = "boom", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warn", style = "curl" } }
+"diagnostic.info" = { underline = { color = "fine", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "fgc", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+error = "boom"
+warning = "warn"
+info = "fine"
+hint = "fgc"
+
+[palette]
+bg1 = "#1d1a1b"
+bg2 = "#1d2121"
+bg3 = "#2d2929"
+b00 = "#000000"
+bg_add = "#1b3f00"
+bg_del = "#4c1100"
+bg_vis = "#004f87"
+line = "#4e4e52"
+h5 = "#c7b7ca"
+h6 = "#aaaaab"
+fg1 = "#bad094"
+fg1bri = "#eaf4a0"
+fg2 = "#fcc1d6"
+fg3 = "#8bb2d3"
+fg4 = "#5f87af"
+fg_see = "#fedece"
+fg_read = "#f8d1aa"
+fgc = "#aad1d1"
+fn = "#d1f8f8"
+kw = "#f8d15d"
+op = "#f85d84"
+str = "#f8aaf8"
+num = "#aaaaf8"
+nvim_accent = "#aa83f8"
+active = "#d1f85d"
+good = "#5df85d"
+fine = "#b2e878"
+boom = "#f8015d"
+warn = "#fa9903"
+loop = "#83f8f8"

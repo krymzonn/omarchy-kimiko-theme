@@ -4,8 +4,7 @@ Palette source of truth is `kimiko.nvim` (`lua/kimiko/palette.lua`, 37 colours).
 This theme is a **desktop / TUI / aether** subset for Omarchy 4. Syntax leftovers
 stay in the nvim plugin.
 
-`AGENTS.md` is the wrong home for this: that file is for how to work in the
-repo. This document is the colour reasoning and the 4.0 remaining work.
+How to test: `AGENTS.md`. This document is colour reasoning and remaining 4.0 work.
 
 Branch: `4.0`. `master` remains the Omarchy 3.4 line until that is dropped.
 
@@ -14,8 +13,10 @@ Branch: `4.0`. `master` remains the Omarchy 3.4 line until that is dropped.
 
 **nvim `accent`** is violet `#aa83f8` (Special, members).
 
-**Omarchy `accent`** in this theme is nvim **`active` / cypher** `#d1f85d`
-(window border, 3.x `colors.toml` accent, waybar `cypher`).
+**Omarchy `accent`** is nvim **`fg1bri`** `#eaf4a0` (OSD bar, gum, vscode
+chrome, keyboard RGB). Caret and window ring stay **`active` / cypher** via
+`bright_foreground` and `hyprland_active_border`. Violet nvim `accent` remains
+`magenta`.
 
 Never mix those two.
 
@@ -103,7 +104,7 @@ honest hue names (`yellow` is gold `kw`, not olive `fg1`).
 
 | Omarchy | nvim | hex | Notes |
 |---|---|---|---|
-| `accent` | `active` | `#d1f85d` | cypher, not nvim accent |
+| `accent` | `fg1bri` | `#eaf4a0` | locked-in widget chrome (OSD fill, gum, vscode); same paint as color11; ring/caret stay cypher |
 | `selection` | `bg_vis` | `#004f87` | Visual wash; **not** neon `good` (that leaks into vscode/aether/Obsidian) |
 | `selection_foreground` | `fg2` | `#fcc1d6` | rose on Visual blue; alt `h5`. Also gum selected rows, vscode selection fg |
 | `muted` | `line` | `#4e4e52` | stock comments/gutter weight (~2:1 on bg) |
@@ -132,7 +133,8 @@ honest hue names (`yellow` is gold `kw`, not olive `fg1`).
 | `hyprland_active_border` | `active` | `rgba(d1f85dee)` | generated lua; cloned themes drop shipped `hyprland.lua` |
 | `hyprland_inactive_border` | `bg3` | `#2d2929` | very quiet vs `background`; bump to `line` if inactive windows vanish |
 
-Same hex, two roles: Omarchy `accent` = `bright_foreground` = nvim `active` (cypher).
+Same hex, two roles: `bright_foreground` = `hyprland_active_border` = nvim `active` (cypher).
+Omarchy `accent` is a third role (`fg1bri`, also color11).
 Neon `good`+`b00` is **not** in `colors.toml`; it lives on `[menu]` / `[launcher]`.
 
 
@@ -237,7 +239,7 @@ Done on `4.0`: semantic `colors.toml`, 3.x extras in `old/`, `shell.toml`,
 btop/chromium/icons kept, `neovim.lua` kept for the author symlink.
 
 1. **README** — `omarchy theme install`, Omarchy 4, drop Waybar/Mako/Walker/Hyprlock and `omarchy-theme-install`. Note the nvim overlay.
-2. **`helix.toml`** — violet strings (`str`). Install keeps this file; generated helix colours strings green.
+2. **`helix.toml`** — first pass in the repo (nvim-named palette, `str` for strings). Eye-check in Helix; install keeps this file.
 3. **Neovim for `omarchy theme install`** — lua is dropped (aether from `colors.toml`). Document overlay / `krymzonn/kimiko.nvim`.
 4. **`unlock.png` + `preview-unlock.png`** — Plymouth and Style → Unlock. `omarchy plymouth preview` for the latter.
 5. **New `preview.png`** — current shot is still a 3.x Waybar desktop.

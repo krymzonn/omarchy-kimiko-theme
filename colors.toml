@@ -3,7 +3,7 @@ mode = "dark"
 # Desktop / TUI / aether palette. Nvim names in comments; syntax leftovers
 # (str, h5, h6, search/diff washes) stay in kimiko.nvim.
 
-accent = "#d1f85d"                 # active / cypher
+accent = "#eaf4a0"                 # fg1bri (locked-in); caret/ring stay cypher; color11 is this paint too
 selection = "#004f87"              # bg_vis; alt: bg_add #1b3f00
 selection_foreground = "#fcc1d6"   # fg2 (rose on Visual blue); alt: h5 #c7b7ca
 muted = "#4e4e52"                  # line; bump candidates: h6 #aaaaab, h5 #c7b7ca, fgc #aad1d1
