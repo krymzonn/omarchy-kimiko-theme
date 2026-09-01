@@ -2,7 +2,8 @@
 
 XIX century newspaper bursts into a night of neon greens and purples,
 when expression demands.  
-A theme for [Omarchy](https://omarchy.org) based on my 2011 vim colorscheme
+A theme for [Omarchy](https://omarchy.org) 4 (Quattro), based on my 2011
+vim colorscheme.
 
 <img width="1920" height="1080"
   alt="Screenshot with neovim and btop running; Strings are violet, not green."
@@ -11,31 +12,38 @@ A theme for [Omarchy](https://omarchy.org) based on my 2011 vim colorscheme
 
 ## What
 
-Now updated for Omarchy 3.4: colors.toml based, with overrides
+`colors.toml` plus `shell.toml`. Palette names in comments are from
+[kimiko.nvim](https://github.com/krymzonn/kimiko.nvim).
 
-* custom nvim colorscheme
+* custom nvim colorscheme (`krymzonn/kimiko.nvim`)
   * strings that are violet, not green
   * 36 distinct colours and shades, mostly of medium contrast
-  * optimised and tested for practicality
   * honed through 15 years of primary use
     * though highly opinionated
-* waybar colours - calmly informative
-* mako colours - for calm, unitrusive notifications
-* walker colours - saturated immediacy
-* btop theme - meaningful colours, without being too distracting
-* hyprlock theme - black with neon lines
-  * looks particularly good on OLED
+* Helix theme (same violet strings; kept on `omarchy theme install`)
+* bar, notifications, launcher, lock, and bar flyouts
+* btop — meaningful colours, without being too distracting
 * 16 terminal colours not far off their canon names
-  * improving compatibility with a wide range of TUIs
+  * caret is cypher (`#d1f85d`)
 * original backgrounds
   * primary at 6K resolution
 
 
 ## Installation
 
+Once `4.0` is merged to `master`:
+
 ```
-omarchy-theme-install https://github.com/krymzonn/omarchy-kimiko-theme
+omarchy theme install https://github.com/krymzonn/omarchy-kimiko-theme
 ```
+
+Until then, clone the `4.0` branch into `~/.config/omarchy/themes/` (a
+directory with `.git` is treated as an install: lua is dropped).
+
+`omarchy theme install` does not apply `neovim.lua`. For the full nvim
+theme, add `krymzonn/kimiko.nvim` in LazyVim, or keep a copy of this
+theme **without** a `.git` directory (or a symlink to the working tree)
+so Omarchy will load `neovim.lua`.
 
 
 ## Origin
@@ -65,9 +73,8 @@ look.
 To install the Nerd variant from Arch Extra[2]:
 
 ```
-yay -S ttf-go-nerd
+omarchy pkg add ttf-go-nerd
 ```
 
 [1] <https://go.dev/blog/go-fonts>  
 [2] <https://archlinux.org/packages/extra/any/ttf-go-nerd/>  
-

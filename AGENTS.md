@@ -19,4 +19,5 @@ OMARCHY_THEME_SKIP_BACKGROUND=1 omarchy theme set kimiko-dev
 
 Without that env, `omarchy theme set` cycles the wallpaper.
 
-Work on branch `4.0`. Leave `master` as the Omarchy 3.4 line.
+Work on branch `4.0`. Leave `master` as the Omarchy 3.4 line until the
+checklist at the end of `design.md` is done.

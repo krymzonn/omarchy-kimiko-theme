@@ -166,7 +166,7 @@ Desktop gets 16+shades; these stay in kimiko.nvim (and can be hardcoded in
 | `#fedece` | `fg_see` | dropped from 4.0 (was color15 / caret; too like read-only) |
 | `#c7b7ca` | `h5` | dusty lilac; btop `graph_text` by hand |
 | `#aaaaab` | `h6` | comments, unless promoted to `muted` |
-| `#f8aaf8` | `str` | **violet strings** — no Omarchy role named string; generated vscode/helix colour strings green |
+| `#f8aaf8` | `str` | **violet strings** — not in `colors.toml`; **`helix.toml` uses it**. Generated vscode/aether still colour strings green |
 | `#ffffff` | `fg0` | unused special |
 | search/diff washes | `bg_match`, `deep_inc`, `bg_search`, `bg_add`, `bg_chg` | editor only (`bg_vis` is `selection`; `bg_del` is `brown`) |
 
@@ -186,7 +186,7 @@ icon, not a cypher underline.
 | Section | 3.x source | Intent |
 |---|---|---|
 | `[notifications]` | Mako | peach on `bg2` at **0.6** alpha; no lime window-chrome |
-| `[popups]` | — | bar flyouts: **`bg1` at 0.9**, **`loop` frame**. OSD pill fill is hardcoded `bg2` at 0.97; OSD text/track use `popups.text` (`fgc`); OSD progress fill is global `Color.accent` (cypher). Flyout *copy* is `bar.foreground` (peach), not `popups.text` |
+| `[popups]` | — | bar flyouts: **`bg1` at 0.9**, **`loop` frame**. OSD pill fill is hardcoded `bg2` at 0.97; OSD text/track use `popups.text` (`fgc`); OSD progress fill is global `Color.accent` (`fg1bri`). Flyout *copy* is `bar.foreground` (peach), not `popups.text` |
 | `[menu]` | Walker | `b00` card, `fgc` text, boom frame, **good fill + b00 text** on the selected row |
 | `[launcher]` | same tokens | Super+Space today reads **`[menu]`** (`Color.menu`); `[launcher]` is ready if they split |
 | `[lock]` | Hyprlock | `b00` field, cypher text, good ring, boom on error; placeholder **`line`** (also the fingerprint glyph) |
@@ -233,17 +233,25 @@ Theme set otherwise advances the wallpaper (same theme → next image; Kimiko vs
 Kimiko Dev are different paths so it restarts at `1-bronze-alps-6k.jpg`).
 
 
-## Remaining for full Omarchy 4
+## Before merging `4.0` to `master`
 
-Done on `4.0`: semantic `colors.toml`, 3.x extras in `old/`, `shell.toml`,
-btop/chromium/icons kept, `neovim.lua` kept for the author symlink.
+Done: semantic `colors.toml`, `shell.toml`, Helix (nvim-named palette, violet
+strings, heading bold/underline), `AGENTS.md`, `neovim.lua` for the author
+symlink, 3.x extras in `old/`.
 
-1. **README** — `omarchy theme install`, Omarchy 4, drop Waybar/Mako/Walker/Hyprlock and `omarchy-theme-install`. Note the nvim overlay.
-2. **`helix.toml`** — first pass in the repo (nvim-named palette, `str` for strings). Eye-check in Helix; install keeps this file.
-3. **Neovim for `omarchy theme install`** — lua is dropped (aether from `colors.toml`). Document overlay / `krymzonn/kimiko.nvim`.
-4. **`unlock.png` + `preview-unlock.png`** — Plymouth and Style → Unlock. `omarchy plymouth preview` for the latter.
-5. **New `preview.png`** — current shot is still a 3.x Waybar desktop.
-6. **Install-path smoke test** — a real clone with `.git`, not the symlink.
-7. **Publish hygiene** — `old/` and `extra-assets/` are copied into the staged theme; decide whether 4.0 ships them.
-8. Optional remaining forks: `muted` → `h6`, `brown` auto-mix, inactive border `line`.
-9. **Do not fast-forward `master`** until ready to drop 3.x.
+Still before merge:
+
+1. **New `preview.png`** — current shot is a 3.x Waybar desktop.
+2. **`unlock.png` + `preview-unlock.png`** — Plymouth and Style → Unlock
+   (`omarchy plymouth preview` for the latter).
+3. **Install-path smoke test** — clone with `.git` (lua dropped, aether + Helix
+   + `shell.toml`). Confirm `omarchy theme install` from GitHub once `master`
+   points here.
+4. **Publish hygiene** — `old/` and `extra-assets/` are copied into the staged
+   theme; decide whether they ship.
+5. Helix H3/H4 colours if they still feel like syntax, not titles (old vim H3
+   was near-white). Optional forks: `muted` → `h6`, `brown` auto-mix, inactive
+   border `line`.
+6. **Do not fast-forward `master` until this list is acceptable.** `omarchy
+   theme install` clones the default branch. Until merge, 3.4 stays on
+   `master` for Omarchy 3 machines.

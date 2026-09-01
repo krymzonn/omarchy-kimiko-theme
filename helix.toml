@@ -1,4 +1,4 @@
-# First pass: nvim kimiko syntax on Helix (kept on `omarchy theme install`).
+# nvim kimiko syntax on Helix (kept on `omarchy theme install`).
 # Palette keys are nvim names. ui.cursor uses cypher (active), not accent.
 
 # Syntax
@@ -42,13 +42,16 @@
 "special" = "nvim_accent"
 "attribute" = "good"
 
-# Markup
-"markup.heading.1" = "op"
-"markup.heading.2" = "fg2"
-"markup.heading.3" = "fg3"
-"markup.heading.4" = "fg4"
-"markup.heading.5" = "h5"
-"markup.heading.6" = "h6"
+# Markup — nvim htmlH* / Title (bold; H3–H4 also underline). Generic
+# heading matches Title (op, bold+underline).
+"markup.heading" = { fg = "op", modifiers = ["bold", "underlined"] }
+"markup.heading.marker" = { fg = "op", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "op", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "fg2", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "fg3", modifiers = ["bold", "underlined"] }
+"markup.heading.4" = { fg = "fg4", modifiers = ["bold", "underlined"] }
+"markup.heading.5" = { fg = "h5", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "h6", modifiers = ["bold"] }
 "markup.list" = "fn"
 "markup.list.unchecked" = "kw"
 "markup.list.checked" = { fg = "good", modifiers = ["bold"] }
